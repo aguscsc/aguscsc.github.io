@@ -417,6 +417,11 @@ a:hover {
   border-style: dashed;
 }
 
+.badge-progress {
+  color: var(--accent);
+  border-style: solid;
+}
+
 /* ---------------------------------------------------------------
    Featured project cards (home + projects hub)
 ------------------------------------------------------------------ */
@@ -617,7 +622,8 @@ figure.figure figcaption {
   margin-bottom: 14px;
 }
 
-.subproject h3 .badge {
+.subproject h3 .badge,
+.project-card h3 .badge {
   margin-left: 10px;
   vertical-align: middle;
   text-transform: none;
