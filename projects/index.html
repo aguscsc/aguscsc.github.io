@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Agustín</title>
+  <meta name="description" content="Projects by Agustín across advanced control, power electronics, intelligent monitoring, and robotics.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="section container">
+      <p class="eyebrow">Projects</p>
+      <h1 class="page-title">Projects</h1>
+      <p class="hero-text" style="margin-bottom: 40px;">
+        Four categories, each built around one flagship system. Smaller
+        experiments live under side projects, below.
+      </p>
+
+      <div class="featured-grid">
+        <a class="project-card cat-control" href="/projects/quadruple-tank.html">
+          <div class="card-cover">
+            <img src="/assets/projects/quadtank/planta-poster.jpg" alt="Quadruple tank HMI showing live tank levels and controller status" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-category"><span data-icon="control"></span>Advanced Control</p>
+            <h3>Quadruple Tank Platform</h3>
+            <p>Five control strategies designed and compared on a real quadruple-tank rig with a live HMI.</p>
+            <span class="tag-row">
+              <span class="tag">HMI ISA 101</span><span class="tag">OPC UA</span><span class="tag">PID</span><span class="tag">Feedforward</span><span class="tag">Predictive Adaptive Control</span><span class="tag">Extended Horizon</span><span class="tag">Fuzzy Logic</span>
+            </span>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card cat-power" href="/projects/dc-dc-converter.html">
+          <div class="card-cover">
+            <img src="/assets/projects/Buck_synchronus/PCB_final.png" alt="Rendered PCB of the bidirectional buck converter" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-category"><span data-icon="power"></span>Power Electronics</p>
+            <h3>DC/DC Converter</h3>
+            <p>A bidirectional buck converter built in hardware, plus a SEPIC converter under model predictive control.</p>
+            <span class="tag-row">
+              <span class="tag">Buck Synchronous</span><span class="tag">SEPIC MPC (planned)</span>
+            </span>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card cat-monitoring" href="/projects/predictive-maintenance.html">
+          <div class="card-cover">
+            <img src="/assets/projects/Induction_motor_RUL/motor.png" alt="Cutaway illustration of a squirrel-cage induction motor" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-category"><span data-icon="monitoring"></span>Intelligent Monitoring</p>
+            <h3>Predictive Maintenance</h3>
+            <p>Model-based fault diagnosis and remaining-useful-life estimation for squirrel-cage induction motors.</p>
+            <span class="tag-row">
+              <span class="tag">Fault Diagnosis</span><span class="tag">RUL Estimation</span>
+            </span>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card cat-robotics" href="/projects/robot-arm.html">
+          <div class="card-cover">
+            <img src="/assets/projects/robot_arm/arm-poster.jpg" alt="Simulink simulation of the 3-DOF robot arm mid pick-and-place motion" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-category"><span data-icon="robotics"></span>Robotics</p>
+            <h3>Robot Arm</h3>
+            <p>A 3-DOF articulated robot arm in an RRR configuration — kinematic design and simulation complete, physical build planned next.</p>
+            <span class="tag-row">
+              <span class="tag">Python</span><span class="tag">Simulation</span><span class="tag">NEMA17</span>
+            </span>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section container" style="padding-top: 0;">
+      <div class="section-head">
+        <p class="eyebrow">Side projects</p>
+        <h2>Smaller things I've built.</h2>
+      </div>
+
+      <div class="side-projects">
+        <div class="side-card">
+          <h4>Wordlebot</h4>
+          <p>A personal project developing a Wordle-solving bot.</p>
+          <a href="https://github.com/aguscsc/Wordlebot" target="_blank" rel="noopener">Code →</a>
+        </div>
+<div class="side-card">
+          <h4>Summarizer</h4>
+          <p>Academic audio-to-text tool for annotating lectures and summarizing lengthy recordings.</p>
+          <a href="https://github.com/aguscsc/Summarizer" target="_blank" rel="noopener">Code →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/partials.js"></script>
+  <script>renderSite("projects");</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robot Arm — Agustín</title>
+  <meta name="description"
+    content="A 3-DOF articulated robot arm in an RRR configuration — kinematic design and simulation, with construction planned.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="project-hero container">
+      <span class="badge badge-robotics"><span data-icon="robotics"></span>Robotics</span>
+      <h1 class="page-title">3-DOF Robot Arm</h1>
+      <p class="hero-text">
+        A 3-DOF articulated robotic arm in an RRR (revolute-revolute-revolute)
+        configuration, designed for NEMA17 stepper motors — kinematic design
+        and simulation are complete; the physical build is planned next.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Python</span>
+        <span class="tag">Simulation</span>
+        <span class="tag">NEMA17</span>
+      </div>
+      <a class="btn btn-secondary" href="https://github.com/aguscsc/Robot-arm-nema17" target="_blank"
+        rel="noopener">View repository →</a>
+    </section>
+
+    <section class="section container">
+      <figure class="figure">
+        <img src="/assets/projects/robot_arm/arm_pick_up.gif"
+          alt="Simulink simulation of the 3-DOF RRR arm performing a pick-and-place motion" loading="lazy">
+        <figcaption>Simulated pick-and-place motion, validating the arm's kinematics before the build.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section container" style="padding-top: 0;">
+      <div class="section-head">
+        <p class="eyebrow">Build stages</p>
+        <h2>From kinematics to hardware.</h2>
+      </div>
+
+      <div class="subsection-list">
+        <div class="subsection">
+          <h3>Design</h3>
+          <p>Kinematic design of the RRR arm — link lengths, joint layout, and workspace analysis.</p>
+        </div>
+        <div class="subsection">
+          <h3>Simulation</h3>
+          <p>Simulating forward and inverse kinematics to validate reach and motion before committing to hardware.</p>
+        </div>
+        <div class="subsection is-planned">
+          <h3>Construction <span class="badge badge-planned">Planned</span></h3>
+          <p>Physical construction of the arm using NEMA17 stepper motors for each joint is still waiting on budget.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/partials.js"></script>
+  <script>renderSite("projects");</script>
+</body>
+
+</html>

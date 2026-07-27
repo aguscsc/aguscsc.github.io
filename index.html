@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agustín Torres — Electronics Engineer</title>
+  <meta name="description"
+    content="Portfolio of Agustín, an electronics engineer working across advanced control, power electronics, intelligent monitoring, and robotics.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="hero container">
+      <div class="hero-copy">
+        <p class="eyebrow">Electronics Engineer</p>
+        <h1> Engineering Portfolio.</h1>
+        <p class="hero-text">
+          I work across advanced control, power electronics, and intelligent
+          monitoring. Turning control theory and circuit design into systems
+          that run in the real world.
+          In this website you'll find projects in which I've worked, with links to their respective demonstration and
+          documentation.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/projects/index.html">View projects</a>
+          <a class="btn btn-secondary" href="/assets/resume-es.pdf" target="_blank" rel="noopener">Résumé (ES)</a>
+        </div>
+      </div>
+
+      <svg class="diagram" viewBox="0 0 460 210" role="img" aria-labelledby="diagram-title">
+        <title id="diagram-title">Block diagram of a feedback control loop: input into a summing junction, through a
+          controller and plant, producing an output that feeds back into the summing junction.</title>
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7"
+            orient="auto-start-reverse">
+            <path d="M0 0 L10 5 L0 10 z" fill="currentColor"></path>
+          </marker>
+        </defs>
+
+        <text class="label" x="2" y="72">INPUT</text>
+        <line class="line" x1="0" y1="90" x2="44" y2="90" marker-end="url(#arrow)"></line>
+        <text class="label" x="46" y="76">+</text>
+        <text class="label" x="46" y="112">&#8722;</text>
+        <circle class="junction" cx="60" cy="90" r="14"></circle>
+
+        <line class="line" x1="74" y1="90" x2="108" y2="90" marker-end="url(#arrow)"></line>
+        <rect class="block" x="110" y="65" width="100" height="50" rx="4"></rect>
+        <text class="label" x="128" y="94">CONTROLLER</text>
+
+        <line class="line" x1="210" y1="90" x2="248" y2="90" marker-end="url(#arrow)"></line>
+        <rect class="block" x="250" y="65" width="100" height="50" rx="4"></rect>
+        <text class="label" x="285" y="94">PLANT</text>
+
+        <line class="line" x1="350" y1="90" x2="428" y2="90" marker-end="url(#arrow)"></line>
+        <text class="label" x="398" y="76">OUTPUT</text>
+
+        <path class="line feedback" d="M390 90 V170 H60 V106" marker-end="url(#arrow)"></path>
+        <text class="label" x="196" y="185">FEEDBACK</text>
+      </svg>
+    </section>
+
+    <section id="projects" class="section container">
+      <div class="section-head">
+        <p class="eyebrow">Featured work</p>
+        <h2>Four areas.</h2>
+      </div>
+
+      <div class="featured-grid">
+        <a class="project-card cat-control" href="/projects/quadruple-tank.html">
+          <div class="card-cover">
+            <img src="/assets/projects/quadtank/planta-poster.jpg"
+              alt="Quadruple tank HMI showing live tank levels and controller status" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-category"><span data-icon="control"></span>Advanced Control</p>
+            <h3>Quadruple Tank Platform</h3>
+            <p>Five control strategies designed and compared on a real quadruple-tank rig with a live HMI.</p>
+            <div class="tag-row">
+              <span class="tag">HMI ISA 101</span><span class="tag">OPC UA</span><span class="tag">PID</span><span
+                class="tag">Feedforward</span><span class="tag">Predictive Adaptive Control</span><span
+                class="tag">Extended Horizon</span><span class="tag">Fuzzy Logic</span>
+            </div>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card cat-power" href="/projects/dc-dc-converter.html">
+          <div class="card-cover">
+            <img src="/assets/projects/Buck_synchronus/PCB_final.png"
+              alt="Rendered PCB of the bidirectional buck converter" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-category"><span data-icon="power"></span>Power Electronics</p>
+            <h3>DC/DC Converter</h3>
+            <p>A bidirectional buck converter built and tested in hardware, plus a SEPIC converter under model
+              predictive control.</p>
+            <div class="tag-row">
+              <span class="tag">Buck Synchronous</span><span class="tag">SEPIC MPC (planned)</span>
+            </div>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card cat-monitoring" href="/projects/predictive-maintenance.html">
+          <div class="card-cover">
+            <img src="/assets/projects/Induction_motor_RUL/motor.png"
+              alt="Cutaway illustration of a squirrel-cage induction motor" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-category"><span data-icon="monitoring"></span>Intelligent Monitoring</p>
+            <h3>Predictive Maintenance</h3>
+            <p>Model-based fault diagnosis and remaining-useful-life estimation for squirrel-cage induction motors.</p>
+            <div class="tag-row">
+              <span class="tag">Fault Diagnosis</span><span class="tag">RUL Estimation</span>
+            </div>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+
+        <a class="project-card cat-robotics" href="/projects/robot-arm.html">
+          <div class="card-cover">
+            <img src="/assets/projects/robot_arm/arm-poster.jpg"
+              alt="Simulink simulation of the 3-DOF robot arm mid pick-and-place motion" loading="lazy">
+          </div>
+          <div class="card-body">
+            <p class="card-category"><span data-icon="robotics"></span>Robotics</p>
+            <h3>Robot Arm</h3>
+            <p>A 3-DOF articulated robot arm in an RRR configuration — kinematic design and simulation complete, physical build planned next.</p>
+            <div class="tag-row">
+              <span class="tag">Python</span><span class="tag">Simulation</span><span class="tag">NEMA17</span>
+            </div>
+            <span class="card-link">View project →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <div class="section-head">
+        <p class="eyebrow">About</p>
+        <h2>Hi, I'm Agustín.</h2>
+      </div>
+      <p class="hero-text">
+        I'm a final-year electronics engineering student interested in the
+        systems that sit between a mathematical model and a working machine:
+        control loops, power converters, and the sensors that watch them run.
+        My projects mix academic work — model-based control and fault
+        diagnosis — with hands-on builds like a robot arm and a power
+        converter, alongside field experience in industrial operations and R&D.
+      </p>
+
+      <p class="eyebrow" style="margin-top: 44px;">Background</p>
+      <div class="subsection-list">
+        <div class="subsection">
+          <h3>Education</h3>
+          <p>Electronics Engineering, Universidad de Concepción, Chile — March 2022 to July 2027 (expected), with a minor in process automation, advanced control, and industrial robotics.</p>
+        </div>
+        <div class="subsection">
+          <h3>Experience</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <p class="timeline-meta">Jan – Feb 2026 · Concepción, Chile</p>
+              <h4>R&D Intern — R9 Ingeniería</h4>
+              <p>Developed signal-processing algorithms for vibration and luminance measurement over portable IoT/smartphone instrumentation. Recompressed an acoustic classification model with TensorFlow Lite, cutting its memory footprint 94% (2.5 GB → 140 MB) for resource-constrained hardware.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-meta">Dec 2023 – Dec 2025 · Los Ángeles, Chile</p>
+              <h4>Operations Supervisor — Agroplant</h4>
+              <p>Supervised field crews of 30+ during peak demand, meeting 100% of production targets under a zero-accidents safety protocol across 12-hour shift rotations.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-meta">Feb – Mar 2024 · Los Ángeles, Chile</p>
+              <h4>Engineer-in-Training — PW Ingeniería</h4>
+              <p>Audited and updated single-line diagrams (SLDs) and technical documentation for high-voltage substations, ensuring regulatory compliance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="focus-list">
+        <div class="focus-item cat-control">
+          <h4>Advanced Control</h4>
+          <p>Designing and comparing control strategies — from classical PID to robust and predictive methods — on real plants.</p>
+        </div>
+        <div class="focus-item cat-power">
+          <h4>Power Electronics</h4>
+          <p>Building and controlling DC/DC converters, from hardware design to the control loop that regulates them.</p>
+        </div>
+        <div class="focus-item cat-monitoring">
+          <h4>Intelligent Monitoring</h4>
+          <p>Using signal processing and machine learning to diagnose faults and estimate remaining useful life.</p>
+        </div>
+        <div class="focus-item cat-robotics">
+          <h4>Robotics</h4>
+          <p>Designing, simulating, and building articulated mechanisms — kinematics through to physical hardware.</p>
+        </div>
+      </div>
+
+      <p class="eyebrow" style="margin-top: 44px;">Tools & topics</p>
+      <div class="tag-cloud">
+        <span class="tag">MATLAB/Simulink</span>
+        <span class="tag">Python</span>
+        <span class="tag">C / C++</span>
+        <span class="tag">RSLogix 5000</span>
+        <span class="tag">FactoryTalk (HMI/SCADA)</span>
+        <span class="tag">LTspice</span>
+        <span class="tag">KiCad</span>
+        <span class="tag">ESP32</span>
+        <span class="tag">PIC32</span>
+        <span class="tag">LaunchXL-F28379D</span>
+        <span class="tag">Modbus</span>
+        <span class="tag">Profibus</span>
+        <span class="tag">HART</span>
+        <span class="tag">Fieldbus</span>
+        <span class="tag">Linux</span>
+        <span class="tag">Git/GitHub</span>
+      </div>
+    </section>
+
+    <section class="section container">
+      <div class="section-head">
+        <p class="eyebrow">Side projects</p>
+        <h2>Smaller things I've built.</h2>
+      </div>
+
+      <div class="side-projects">
+        <div class="side-card">
+          <h4>Wordlebot</h4>
+          <p>A personal project developing a Wordle-solving bot.</p>
+          <a href="https://github.com/aguscsc/Wordlebot" target="_blank" rel="noopener">Code →</a>
+        </div>
+<div class="side-card">
+          <h4>Summarizer</h4>
+          <p>Academic audio-to-text tool for annotating lectures and summarizing lengthy recordings.</p>
+          <a href="https://github.com/aguscsc/Summarizer" target="_blank" rel="noopener">Code →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/partials.js"></script>
+  <script>renderSite("home");</script>
+</body>
+
+</html>

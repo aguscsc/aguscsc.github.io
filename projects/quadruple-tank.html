@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadruple Tank — Agustín</title>
+  <meta name="description"
+    content="Advanced control on a quadruple-tank: PID, feedforward, fuzzy, and model predictive control.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <section class="project-hero container">
+      <span class="badge badge-control"><span data-icon="control"></span>Advanced Control</span>
+      <h1 class="page-title">Quadruple Tank </h1>
+      <p class="hero-text">
+        Automatic control design and implementation for a 4-tank pilot plant,
+        including real-time control, communication protocols, and an HMI.
+        The same coupled, nonlinear plant is used as a testbed to design and
+        compare four different control strategies.
+      </p>
+      <div class="tag-row">
+        <span class="tag">Python</span>
+        <span class="tag">Real-time Control</span>
+        <span class="tag">HMI</span>
+      </div>
+      <a class="btn btn-secondary"
+        href="https://github.com/aguscsc/Sistema-de-Control-para-Planta-Piloto-de-4-Estanques" target="_blank"
+        rel="noopener">View repository →</a>
+    </section>
+
+    <section class="section container">
+      <figure class="figure">
+        <img src="/assets/projects/quadtank/planta.gif"
+          alt="Live HMI screen recording of the quadruple-tank plant, showing tank levels, feedforward toggles, and alarm status updating in real time"
+          loading="lazy">
+        <figcaption>The HMI running live — tank levels, feedforward toggles, and alarms updating in real time.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section class="section container" style="padding-top: 0;">
+      <div class="section-head">
+        <p class="eyebrow">Control strategies</p>
+        <h2>Four approaches, one plant.</h2>
+      </div>
+
+      <div class="subsection-list">
+        <div class="subsection">
+          <h3>PID</h3>
+          <p>Classical proportional-integral-derivative control for setpoint tracking and disturbance rejection on the
+            coupled tank levels.</p>
+        </div>
+        <div class="subsection">
+          <h3>Feedforward</h3>
+          <p>Feedforward compensation added alongside feedback control to improve reference tracking and reduce loop
+            interaction.</p>
+        </div>
+        <div class="subsection">
+          <h3>Fuzzy</h3>
+          <p>A fuzzy logic controller encoding heuristic control rules as an alternative to model-based design.</p>
+        </div>
+        <div class="subsection">
+          <h3>MPC</h3>
+          <p>Model predictive control optimizing future control moves over a receding horizon, subject to input and
+            state constraints.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="/js/partials.js"></script>
+  <script>renderSite("projects");</script>
+</body>
+
+</html>
