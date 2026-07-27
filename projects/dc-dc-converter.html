@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DC/DC Converter — Agustín</title>
-  <meta name="description" content="Power electronics work: a bidirectional buck DC-DC converter, plus a SEPIC converter under model predictive control.">
+  <meta name="description" content="Power electronics work: a synchronous buck converter with PIC32/ESP32, a digitally-implemented Type III control loop, and a planned SEPIC converter under MPC.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,11 +19,13 @@
       <span class="badge badge-power"><span data-icon="power"></span>Power Electronics</span>
       <h1 class="page-title">DC/DC Converter</h1>
       <p class="hero-text">
-        Two converter projects sharing the same territory: switching power
-        conversion and the control loop that regulates it.
+        Three converter projects I've worked on in the same territory:
+        switching power conversion and the control loop that regulates it.
       </p>
       <div class="tag-row">
-        <span class="tag">Python</span>
+        <span class="tag">PIC32</span>
+        <span class="tag">ESP32</span>
+        <span class="tag">LaunchXL-F28379D</span>
         <span class="tag">Power Electronics</span>
       </div>
     </section>
@@ -31,43 +33,53 @@
     <section class="section container">
       <div class="section-head">
         <p class="eyebrow">Sub-projects</p>
-        <h2>Two converters.</h2>
+        <h2>Three converters.</h2>
       </div>
 
       <div class="subproject">
         <h3>Buck Synchronous</h3>
         <p>
-          A synchronous bidirectional buck DC-DC converter, enabling power
-          flow in both directions between two DC buses.
+          In this project I designed and implemented a synchronous buck
+          converter, controlling its output with a PIC32 and developing a
+          monitoring system with an ESP32.
         </p>
 
         <div class="figure-grid">
           <figure class="figure">
-            <img src="/assets/projects/Buck_synchronus/PCB_final.png" alt="Rendered PCB of the synchronous bidirectional buck converter" loading="lazy">
+            <img src="/assets/projects/Buck_synchronus/PCB_final.png" alt="Rendered PCB of the synchronous buck converter" loading="lazy">
             <figcaption>The converter board.</figcaption>
           </figure>
           <figure class="figure">
-            <img src="/assets/projects/Buck_synchronus/gui.png" alt="Custom control GUI connected to the converter over serial, showing live duty cycle control and voltage/PWM plots" loading="lazy">
-            <figcaption>Custom control GUI — live duty cycle control, PWM and output voltage plots over a serial link.</figcaption>
+            <img src="/assets/projects/Buck_synchronus/gui.png" alt="Custom ESP32-based monitoring GUI connected to the converter over serial, showing live duty cycle control and voltage/PWM plots" loading="lazy">
+            <figcaption>ESP32 monitoring GUI — live duty cycle control, PWM and output voltage plots over a serial link.</figcaption>
           </figure>
         </div>
 
-        <p><strong>Type III compensator</strong> — the voltage loop is closed with a Type III compensator for adequate phase margin and bandwidth. Demo below.</p>
+        <a class="btn btn-secondary" href="https://github.com/aguscsc/Bidirectional-Buck-DC-DC-converter" target="_blank" rel="noopener">View repository →</a>
+      </div>
+
+      <div class="subproject">
+        <h3>Buck Control Type 3</h3>
+        <p>
+          Using a LaunchXL-F28379D, I designed and implemented a Type III
+          control loop digitally — chosen for the phase boost it gives near
+          crossover, keeping adequate phase margin and bandwidth despite the
+          converter's double pole. Demo below.
+        </p>
 
         <div class="video-embed">
           <iframe src="https://www.youtube.com/embed/nPwh1WUrt-o" title="Buck converter Type III compensator demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <p class="video-caption"><a href="https://youtu.be/nPwh1WUrt-o" target="_blank" rel="noopener">Watch on YouTube →</a></p>
-
-        <a class="btn btn-secondary" href="https://github.com/aguscsc/Bidirectional-Buck-DC-DC-converter" target="_blank" rel="noopener">View repository →</a>
       </div>
 
       <div class="subproject is-planned">
-        <h3>SEPIC Converter — MPC Control <span class="badge badge-planned">Planned</span></h3>
+        <h3>SEPIC <span class="badge badge-planned">Planned</span></h3>
         <p>
-          A SEPIC (single-ended primary-inductor converter) regulated with
-          model predictive control. Scope is defined; the build hasn't
-          started yet, so there's no repository link here — check back later.
+          In this project I plan to design and implement a SEPIC topology
+          converter, then apply MPC and compare it to different control
+          strategies. Scope is defined; the build hasn't started yet, so
+          there's no repository link here — check back later.
         </p>
       </div>
     </section>

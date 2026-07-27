@@ -24,22 +24,36 @@
       <span class="badge badge-control"><span data-icon="control"></span>Advanced Control</span>
       <h1 class="page-title">Quadruple Tank </h1>
       <p class="hero-text">
-        Automatic control design and implementation for a 4-tank pilot plant,
-        including real-time control, communication protocols, and an HMI.
-        The same coupled, nonlinear plant is used as a testbed to design and
-        compare four different control strategies.
+        In this project I developed the automatic control system for a 4-tank
+        pilot plant — from the control logic to an ISA-101 compliant HMI in
+        FactoryTalk View ME, communicating over OPC UA. I used the same
+        coupled, nonlinear plant as a testbed to design and compare four
+        control strategies: PID, feedforward, fuzzy logic, and MPC.
       </p>
       <div class="tag-row">
         <span class="tag">Python</span>
         <span class="tag">Real-time Control</span>
         <span class="tag">HMI</span>
       </div>
-      <a class="btn btn-secondary"
-        href="https://github.com/aguscsc/Sistema-de-Control-para-Planta-Piloto-de-4-Estanques" target="_blank"
-        rel="noopener">View repository →</a>
+      <div class="hero-actions">
+        <a class="btn btn-secondary"
+          href="https://github.com/aguscsc/Sistema-de-Control-para-Planta-Piloto-de-4-Estanques" target="_blank"
+          rel="noopener">View repository →</a>
+        <a class="btn btn-secondary" href="/assets/projects/quadtank/main.pdf" target="_blank"
+          rel="noopener">Read the technical report →</a>
+      </div>
     </section>
 
     <section class="section container">
+      <figure class="figure">
+        <img src="/assets/projects/quadtank/planta_4_estanques_P%26ID.png"
+          alt="P&ID diagram of the quadruple-tank plant, showing tanks, pumps, level and flow transmitters, and override control logic"
+          loading="lazy">
+        <figcaption>P&ID of the plant — four tanks, two pumps, level/flow transmitters, and override control logic.</figcaption>
+      </figure>
+    </section>
+
+    <section class="section container" style="padding-top: 0;">
       <figure class="figure">
         <img src="/assets/projects/quadtank/planta.gif"
           alt="Live HMI screen recording of the quadruple-tank plant, showing tank levels, feedforward toggles, and alarm status updating in real time"
@@ -47,6 +61,11 @@
         <figcaption>The HMI running live — tank levels, feedforward toggles, and alarms updating in real time.
         </figcaption>
       </figure>
+
+      <div class="video-embed" style="margin-top: 32px;">
+        <iframe src="https://www.youtube.com/embed/Ni7OxD4VFhw" title="HMI for PID+FF control on the 4-tank plant, built in FactoryTalk View ME" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">HMI for PID + Feedforward control, built in FactoryTalk View ME. <a href="https://youtu.be/Ni7OxD4VFhw" target="_blank" rel="noopener">Watch on YouTube →</a></p>
     </section>
 
     <section class="section container" style="padding-top: 0;">
