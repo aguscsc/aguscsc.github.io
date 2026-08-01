@@ -173,10 +173,6 @@ a:hover {
   text-decoration: none;
 }
 
-.logo-dot {
-  color: var(--accent);
-}
-
 .nav {
   display: flex;
   align-items: center;
@@ -289,6 +285,10 @@ a:hover {
   font-size: 1.05rem;
   max-width: 58ch;
   margin-bottom: 32px;
+}
+
+.hero-copy .badge {
+  margin-bottom: 20px;
 }
 
 .hero-actions {

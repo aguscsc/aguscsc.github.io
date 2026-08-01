@@ -7,7 +7,8 @@ const NAV_ITEMS = [
   { key: "home", href: "/index.html", label: "Home" },
   { key: "about", href: "/index.html#about", label: "About" },
   { key: "projects", href: "/projects/index.html", label: "Projects" },
-  { key: "resume", href: "/assets/resume-es.pdf", label: "Résumé (ES)", external: true },
+  { key: "resume-en", href: "/assets/Resume_EN.pdf", label: "Résumé (EN)", external: true },
+  { key: "resume-es", href: "/assets/Resume_ES.pdf", label: "Résumé (ES)", external: true },
   { key: "contact", href: "/contact.html", label: "Contact" }
 ];
 
@@ -27,7 +28,7 @@ function headerHTML() {
 
   return `
     <div class="container header-inner">
-      <a href="/index.html" class="logo">Agustín<span class="logo-dot">.</span></a>
+      <a href="/index.html" class="logo" aria-label="Home">⚡</a>
       <nav class="nav">${links}</nav>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
     </div>
