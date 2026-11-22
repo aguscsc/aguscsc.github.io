@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DC/DC Converter — Agustín</title>
-  <meta name="description" content="Power electronics work: a synchronous buck converter with PIC32/ESP32, a digitally-implemented Type III control loop, and a planned SEPIC converter under MPC.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+  <meta name="description"
+    content="Power electronics work: a synchronous buck converter with PIC32/ESP32, a digitally-implemented Type III control loop, and a SEPIC converter (in progress) under MPC.">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
+
 <body>
   <div id="site-header"></div>
 
@@ -46,16 +51,21 @@
 
         <div class="figure-grid">
           <figure class="figure">
-            <img src="/assets/projects/Buck_synchronus/PCB_final.png" alt="Rendered PCB of the synchronous buck converter" loading="lazy">
+            <img src="/assets/projects/Buck_synchronus/PCB_final.png"
+              alt="Rendered PCB of the synchronous buck converter" loading="lazy">
             <figcaption>The converter board.</figcaption>
           </figure>
           <figure class="figure">
-            <img src="/assets/projects/Buck_synchronus/gui.png" alt="Custom ESP32-based monitoring GUI connected to the converter over serial, showing live duty cycle control and voltage/PWM plots" loading="lazy">
-            <figcaption>ESP32 monitoring GUI — live duty cycle control, PWM and output voltage plots over a serial link.</figcaption>
+            <img src="/assets/projects/Buck_synchronus/gui.png"
+              alt="Custom ESP32-based monitoring GUI connected to the converter over serial, showing live duty cycle control and voltage/PWM plots"
+              loading="lazy">
+            <figcaption>ESP32 monitoring GUI — live duty cycle control, PWM and output voltage plots over a serial link.
+            </figcaption>
           </figure>
         </div>
 
-        <a class="btn btn-secondary" href="https://github.com/aguscsc/Bidirectional-Buck-DC-DC-converter" target="_blank" rel="noopener">View repository →</a>
+        <a class="btn btn-secondary" href="https://github.com/aguscsc/Bidirectional-Buck-DC-DC-converter"
+          target="_blank" rel="noopener">View repository →</a>
       </div>
 
       <div class="subproject">
@@ -68,21 +78,41 @@
         </p>
 
         <div class="video-embed">
-          <iframe src="https://www.youtube.com/embed/nPwh1WUrt-o" title="Buck converter Type III compensator demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe src="https://www.youtube.com/embed/nPwh1WUrt-o" title="Buck converter Type III compensator demo"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
         </div>
-        <p class="video-caption"><a href="https://youtu.be/nPwh1WUrt-o" target="_blank" rel="noopener">Watch on YouTube →</a></p>
+        <p class="video-caption"><a href="https://youtu.be/nPwh1WUrt-o" target="_blank" rel="noopener">Watch on YouTube
+            →</a></p>
       </div>
 
-      <div class="subproject is-planned">
-        <h3>SEPIC <span class="badge badge-planned">Planned</span></h3>
+      <div class="subproject">
+        <h3>SEPIC <span class="badge badge-progress">In Progress</span></h3>
         <p>
-          In this project I plan to design and implement a SEPIC topology
-          converter, then apply MPC and compare it to different control
-          strategies. Scope is defined; the build hasn't started yet, so the
-          repository below is still empty — updates coming August 2026.
+          In this project I'm designing and implementing a SEPIC topology
+          converter, to then apply MPC and compare it against other control
+          strategies.
         </p>
 
-        <a class="btn btn-secondary" href="https://github.com/aguscsc/Model-Predictive-Control-Strategies-for-Fourth-Order-Power-Converters" target="_blank" rel="noopener">View repository →</a>
+        <div class="figure-grid">
+          <figure class="figure">
+            <img src="/assets/projects/SEPIC/pcb_3d.png"
+              alt="3D render of the SEPIC converter PCB with two toroidal inductors, MOSFET, gate driver and screw terminals"
+              loading="lazy">
+            <figcaption>The SEPIC board — 3D render.</figcaption>
+          </figure>
+          <figure class="figure">
+            <img src="/assets/projects/SEPIC/sepic_test_bench.jpeg"
+              alt="Assembled SEPIC converter in a 3D-printed enclosure on the lab bench, wired to a LaunchXL-F28379D, power supply, oscilloscope and multimeter"
+              loading="lazy">
+            <figcaption>On the test bench — assembled board, LaunchXL, scope and meter.</figcaption>
+          </figure>
+        </div>
+
+        <a class="btn btn-secondary"
+          href="https://github.com/aguscsc/Model-Predictive-Control-Strategies-for-Fourth-Order-Power-Converters"
+          target="_blank" rel="noopener">View repository →</a>
       </div>
     </section>
   </main>
@@ -92,4 +122,5 @@
   <script src="/js/partials.js"></script>
   <script>renderSite("projects");</script>
 </body>
+
 </html>
