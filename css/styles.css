@@ -597,6 +597,51 @@ figure.figure img {
   max-width: none;
 }
 
+/* Smaller figures for squarer/portrait images */
+.figure-grid.figure-grid-compact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.figure-grid-compact figure.figure {
+  flex: 0 1 340px;
+  min-width: 0;
+}
+
+.figure-grid-compact figure.figure.figure-wide {
+  flex-basis: 460px;
+}
+
+/* One row of figures with equal image heights: each figure's width
+   is proportional to its image aspect ratio (--ar = width / height). */
+.figure-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 8px 0 40px;
+}
+
+.figure-row figure.figure {
+  flex: var(--ar, 1) 1 0;
+  min-width: 0;
+  max-width: none;
+}
+
+@media (max-width: 700px) {
+  .figure-row {
+    flex-wrap: wrap;
+  }
+
+  .figure-row figure.figure {
+    flex-basis: 100%;
+  }
+
+  .figure-row figure.figure.figure-photo {
+    max-width: 280px;
+  }
+}
+
 figure.figure.figure-small {
   max-width: 280px;
 }
