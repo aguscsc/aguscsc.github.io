@@ -11,8 +11,8 @@ contact.html
 projects/index.html              Projects hub — all 4 categories + side projects
 projects/quadruple-tank.html     Advanced Control
 projects/dc-dc-converter.html    Power Electronics
-projects/predictive-maintenance.html   Intelligent Monitoring
-projects/robot-arm.html          Robotics
+projects/predictive-maintenance.html   Intelligent Monitoring (motor fault diagnosis)
+projects/robot-arm.html          Robotics (anti-slosh transport + 3-DOF arm)
 css/styles.css                   All styling (light "engineering notebook" theme,
                                   dark "blueprint" theme via prefers-color-scheme)
 js/partials.js                   Shared header/footer + category icons, injected
